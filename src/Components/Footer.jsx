@@ -13,6 +13,7 @@ import TwitterIcon from "@mui/icons-material/Twitter";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import { ToastContainer, toast } from "react-toastify";
+import { FaTiktok } from "react-icons/fa";
 import "react-toastify/dist/ReactToastify.css";
 import { Link } from "react-router-dom";
 
@@ -55,19 +56,19 @@ export default function Footer() {
             <Typography variant='h6' gutterBottom>
               Follow Us
             </Typography>
-            <IconButton
+            {/* <IconButton
               href='https://facebook.com'
               target='_blank'
               sx={{ color: "#fff" }}
             >
               <FacebookIcon />
-            </IconButton>
+            </IconButton> */}
             <IconButton
-              href='https://twitter.com'
+              href='https://www.tiktok.com/@foodforlife.org?_t=ZG-8svnvH9Ut05&_r=1'
               target='_blank'
               sx={{ color: "#fff" }}
             >
-              <TwitterIcon />
+              <FaTiktok />
             </IconButton>
             <IconButton
               href='https://www.instagram.com/foodforlife_org/profilecard/?igsh=MjgwcmRpamZiZ3l2'
@@ -76,13 +77,13 @@ export default function Footer() {
             >
               <InstagramIcon />
             </IconButton>
-            <IconButton
+            {/* <IconButton
               href='https://linkedin.com'
               target='_blank'
               sx={{ color: "#fff" }}
             >
               <LinkedInIcon />
-            </IconButton>
+            </IconButton> */}
           </Grid>
 
           <Grid item xs={12} md={4} textAlign='center'>
