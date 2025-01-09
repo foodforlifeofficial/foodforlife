@@ -27,6 +27,21 @@ const heartAnimation = keyframes`
   }
 `;
 
+const brokenHeartAnimation = keyframes`
+  0% {
+    transform: rotate(0deg) scale(1);
+    opacity: 0;
+  }
+  50% {
+    transform: rotate(45deg) scale(1.2);
+    opacity: 1;
+  }
+  100% {
+    transform: rotate(90deg) scale(1);
+    opacity: 0;
+  }
+`;
+
 const Heart = () => (
   <Box
     sx={{
@@ -43,6 +58,21 @@ const Heart = () => (
   </Box>
 );
 
+const BrokenHeart = () => (
+  <Box
+    sx={{
+      position: "absolute",
+      top: "50%",
+      left: "50%",
+      transform: "translate(-50%, -50%)",
+      fontSize: "70px",
+      color: "red",
+      animation: `${brokenHeartAnimation} 1.5s ease-in-out`,
+    }}
+  >
+    💔
+  </Box>
+);
 
 const Donate = ({ darkMode }) => {
   const [showOptions, setShowOptions] = useState(false);
@@ -52,13 +82,18 @@ const Donate = ({ darkMode }) => {
 
 
   const [showHeart, setShowHeart] = useState(false);
-
-  // Handle checkbox change
+  const [showBrokenHeart, setShowBrokenHeart] = useState(false);
+  
   const handleCheckboxChange = (event) => {
     setIsConfirmed(event.target.checked);
     if (event.target.checked) {
       setShowHeart(true);
+      setShowBrokenHeart(false);
       setTimeout(() => setShowHeart(false), 1500); 
+    } else {
+      setShowHeart(false); 
+      setShowBrokenHeart(true);
+      setTimeout(() => setShowBrokenHeart(false), 1500); 
     }
   };
 
