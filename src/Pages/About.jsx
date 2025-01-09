@@ -70,7 +70,7 @@ export default function About({ darkMode }) {
           }}
         >
           <img
-            src='/kids.jpg'
+            src={kids}
             alt='Child with bread'
             style={{ width: "100%", height: "auto", objectFit: "cover" }}
           />
