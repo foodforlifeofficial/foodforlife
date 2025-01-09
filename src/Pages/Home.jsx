@@ -83,7 +83,7 @@ export default function Home({ darkMode }) {
           width: "100%",
         }}
       >
-        <Grid container spacing={2} alignItems='center'>
+        <Grid container alignItems='center'>
           <Grid
             item
             xs={12}
@@ -162,7 +162,7 @@ export default function Home({ darkMode }) {
           width: "100%",
         }}
       >
-        <Grid container spacing={6} alignItems='center'>
+        <Grid container alignItems='center'>
           <Grid item xs={12} md={6}>
             <Typography
               variant='h4'
@@ -203,7 +203,7 @@ export default function Home({ darkMode }) {
           width: "100%",
         }}
       >
-        <Grid container spacing={2} alignItems='center'>
+        <Grid container alignItems='center'>
           <Grid
             item
             xs={12}
@@ -281,7 +281,7 @@ export default function Home({ darkMode }) {
           width: "100%",
         }}
       >
-        <Grid container spacing={6} alignItems='center'>
+        <Grid container alignItems='center'>
           <Grid item xs={12} md={6}>
             {/* <Typography
               variant='h4'
