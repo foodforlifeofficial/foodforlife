@@ -9,6 +9,7 @@ import donation from "/donation.jpg";
 import home from "/home.jpg";
 import home2 from "/home2.jpg";
 import kids from "/kids.jpg";
+import { styled } from "@mui/system";
 
 const images = [
   donation,
