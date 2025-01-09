@@ -9,6 +9,9 @@ import {
 } from "@mui/material";
 import { styled } from "@mui/system";
 import homeBack from "/home.jpg";
+import homeBack2 from "/home2.jpg";
+import ua1 from "/ua1.jpg";
+import ua2 from "/ua2.jpg";
 
 const Section = styled(Box)({
   padding: "10px 0",
@@ -32,7 +35,13 @@ const YellowButton = styled(Button)({
     backgroundColor: "#dba100",
   },
 });
-
+const BackgroundBox = styled(Box)({
+  width: "100%",
+  height: "400px", // Adjust the height as needed
+  backgroundSize: "cover",
+  backgroundPosition: "center",
+  borderRadius: "8px",
+});
 export default function Home({ darkMode }) {
   return (
     <Box
@@ -83,7 +92,7 @@ export default function Home({ darkMode }) {
               boxSizing: "border-box",
             }}
           >
-            <Image src={homeBack} alt='Children eating' />
+            <BackgroundBox style={{ backgroundImage: `url(${homeBack})` }} />
           </Grid>
           <Grid item xs={12} md={6}>
             <Card
@@ -183,7 +192,7 @@ export default function Home({ darkMode }) {
               boxSizing: "border-box",
             }}
           >
-            <Image src='/home2.jpg' alt='Mother feeding child' />
+            <BackgroundBox style={{ backgroundImage: `url(${homeBack2})` }} />
           </Grid>
         </Grid>
       </Section>
@@ -203,7 +212,7 @@ export default function Home({ darkMode }) {
               boxSizing: "border-box",
             }}
           >
-            <Image src='/ua1.jpg' alt='Ukraine' />
+            <BackgroundBox style={{ backgroundImage: `url(${ua1})` }} />
           </Grid>
           <Grid item xs={12} md={6}>
             <Card
@@ -323,7 +332,7 @@ export default function Home({ darkMode }) {
               boxSizing: "border-box",
             }}
           >
-            <Image src='/ua2.jpg' alt='Mother feeding child' />
+            <BackgroundBox style={{ backgroundImage: `url(${ua2})` }} />
           </Grid>
         </Grid>
       </Section>
