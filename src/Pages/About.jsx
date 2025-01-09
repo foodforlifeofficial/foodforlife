@@ -16,7 +16,13 @@ const images = [
   home2,
   kids
 ];
-
+const SlideBox = styled(Box)({
+  width: "100%",
+  height: "400px", 
+  backgroundSize: "cover",
+  backgroundPosition: "center",
+  borderRadius: "8px",
+});
 export default function About({ darkMode }) {
   const settings = {
     dots: true,
