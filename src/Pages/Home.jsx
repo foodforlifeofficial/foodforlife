@@ -12,6 +12,7 @@ import homeBack from "/home.jpg";
 import homeBack2 from "/home2.jpg";
 import ua1 from "/ua1.jpg";
 import ua2 from "/ua2.jpg";
+import { Link } from "react-router-dom";
 
 const Section = styled(Box)({
   padding: "10px 0",
