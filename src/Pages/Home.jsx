@@ -135,12 +135,12 @@ export default function Home({ darkMode }) {
                   surgery without anaesthesia.
                 </Typography>
                 <Typography variant='h5' fontWeight='bold' gutterBottom mt={3}>
-                  <YellowButton variant='contained' href='/donate'>
+                  <YellowButton variant='contained' component={Link} to='/donate'>
                     Donate for Palestine
                   </YellowButton>
                   <img
                     src='https://upload.wikimedia.org/wikipedia/commons/0/00/Flag_of_Palestine.svg'
-                    alt='Ukrainian Flag'
+                    alt='Palestine Flag'
                     style={{
                       width: "24px",
                       height: "16px",
@@ -254,7 +254,7 @@ export default function Home({ darkMode }) {
                   dominated by fear and uncertainty.
                 </Typography>
                 <Typography variant='h5' fontWeight='bold' gutterBottom mt={3}>
-                  <YellowButton variant='contained' href='/donate'>
+                <YellowButton variant='contained' component={Link} to='/donate'>
                     Donate for Ukraine
                   </YellowButton>
                   <img

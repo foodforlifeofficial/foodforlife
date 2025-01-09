@@ -12,6 +12,7 @@ import {
 } from "@mui/material";
 import { Link } from "react-router-dom";
 import MenuIcon from "@mui/icons-material/Menu";
+import logo from "/logo.png";
 
 export default function Navbar({ darkMode, toggleDarkMode }) {
   const [anchorEl, setAnchorEl] = useState(null);
@@ -57,11 +58,10 @@ export default function Navbar({ darkMode, toggleDarkMode }) {
           </Typography> */}
           <Link to='/'>
             <img
-              src='/logo.png'
+              src={logo}
               alt='Company Logo'
               style={{
                 height: "50px",
-                //   marginRight: "10px",
               }}
             />
           </Link>
