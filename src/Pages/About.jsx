@@ -5,13 +5,16 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import backgroundImage from "/termsofuse.jpg";
+import donation from "/donation.jpg";
+import home from "/home.jpg";
+import home2 from "/home2.jpg";
+import kids from "/kids.jpg";
 
 const images = [
-  "/donation.jpg",
-  "/home.jpg",
-  "/home2.jpg",
-  "/kids.jpg",
-  //   "/images/img5.jpg",
+  donation,
+  home,
+  home2,
+  kids
 ];
 
 export default function About({ darkMode }) {
@@ -134,20 +137,15 @@ export default function About({ darkMode }) {
           }}
         >
           <Slider {...settings}>
-            {images.map((image, index) => (
-              <Box key={index}>
-                <img
-                  src={image}
-                  alt={`slide-${index}`}
-                  style={{
-                    width: "100%",
-                    height: "400px",
-                    objectFit: "cover",
-                  }}
-                />
-              </Box>
-            ))}
-          </Slider>
+      {images.map((image, index) => (
+        <SlideBox
+          key={index}
+          style={{
+            backgroundImage: `url(${image})`, 
+          }}
+        />
+      ))}
+    </Slider>
           <CardContent>
             <Typography variant='h5' fontWeight='bold'>
               Photo Stories of Impact
