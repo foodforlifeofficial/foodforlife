@@ -123,7 +123,7 @@ const Donate = ({ darkMode }) => {
           boxShadow: "0px 4px 10px rgba(0, 0, 0, 0.2)",
         }}
       >
-        {showHeart && <Heart />}
+        {showHeart && <Heart />}{showBrokenHeart && <BrokenHeart />}
         <Typography
           variant='h3'
           fontWeight='bold'
