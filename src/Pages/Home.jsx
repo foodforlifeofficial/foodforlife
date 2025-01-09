@@ -8,6 +8,7 @@ import {
   CardContent,
 } from "@mui/material";
 import { styled } from "@mui/system";
+import homeBack from "/home.jpg";
 
 const Section = styled(Box)({
   padding: "10px 0",
@@ -82,7 +83,7 @@ export default function Home({ darkMode }) {
               boxSizing: "border-box",
             }}
           >
-            <Image src='/home.jpg' alt='Children eating' />
+            <Image sx={{backgroundImage: `url(${homeBack})`}} alt='Children eating' />
           </Grid>
           <Grid item xs={12} md={6}>
             <Card
