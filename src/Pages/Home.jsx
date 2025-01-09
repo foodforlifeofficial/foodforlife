@@ -83,7 +83,7 @@ export default function Home({ darkMode }) {
               boxSizing: "border-box",
             }}
           >
-            <Image sx={{backgroundImage: `url(${homeBack})`}} alt='Children eating' />
+            <Image src={homeBack} alt='Children eating' />
           </Grid>
           <Grid item xs={12} md={6}>
             <Card
