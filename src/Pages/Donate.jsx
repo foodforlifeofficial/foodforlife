@@ -88,6 +88,7 @@ const Donate = ({ darkMode }) => {
           boxShadow: "0px 4px 10px rgba(0, 0, 0, 0.2)",
         }}
       >
+        {showHeart && <Heart />}
         <Typography
           variant='h3'
           fontWeight='bold'
@@ -129,7 +130,7 @@ const Donate = ({ darkMode }) => {
                 terms of use and agree to all points.
               </Typography>
             }
-          />{showHeart && <Heart />}
+          />
         </Box>
 
         {showError && (
