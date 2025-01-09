@@ -34,7 +34,7 @@ const Heart = () => (
       top: "50%",
       left: "50%",
       transform: "translate(-50%, -50%)",
-      fontSize: "50px",
+      fontSize: "70px",
       color: "red",
       animation: `${heartAnimation} 1.5s ease-in-out`,
     }}
@@ -58,7 +58,7 @@ const Donate = ({ darkMode }) => {
     setIsConfirmed(event.target.checked);
     if (event.target.checked) {
       setShowHeart(true);
-      setTimeout(() => setShowHeart(false), 2000); 
+      setTimeout(() => setShowHeart(false), 1500); 
     }
   };
 
