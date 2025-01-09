@@ -4,16 +4,15 @@ import { PayPalButtons } from "@paypal/react-paypal-js";
 const PayPalButton = () => {
   return (
     <div>
-      {/* <h2>Donează prin PayPal</h2> */}
-      <PayPalButtons
+      {/* <PayPalButtons
         createOrder={(data, actions) => {
           return actions.order.create({
             purchase_units: [
               {
                 amount: {
-                  value: "10.00", // suma donației
+                  value: "10.00",
                 },
-                shipping_preference: "NO_SHIPPING", // Dezactivează adresa de livrare
+                shipping_preference: "NO_SHIPPING", 
               },
             ],
             application_context: {
@@ -30,7 +29,7 @@ const PayPalButton = () => {
         onError={(err) => {
           console.error("Eroare la plată: ", err);
         }}
-      />
+      /> */}
     </div>
   );
 };

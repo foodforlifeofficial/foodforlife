@@ -8,7 +8,7 @@ import {
 } from "@mui/material";
 import backgroundImage from "/donation.jpg";
 import { SlPaypal } from "react-icons/sl";
-import PayPalButton from "../PayPal/PayPalButton";
+// import PayPalButton from "../PayPal/PayPalButton";
 import { RiBtcLine } from "react-icons/ri";
 
 const Donate = ({ darkMode }) => {
@@ -66,7 +66,6 @@ const Donate = ({ darkMode }) => {
           preferred payment method below.
         </Typography>
 
-        {/* Checkbox for Confirmation */}
         <Box mt={4}>
           <FormControlLabel
             control={
@@ -93,27 +92,25 @@ const Donate = ({ darkMode }) => {
           />
         </Box>
 
-        {/* Error Message if Not Confirmed */}
         {showError && (
           <Typography mt={2} sx={{ color: "red" }}>
             You must confirm to proceed with the donation.
           </Typography>
         )}
 
-        {/* Payment Methods (Conditional Rendering & Transparency) */}
         <Box
           mt={4}
           sx={{
-            opacity: isConfirmed ? 1 : 0.3, // Dim if not confirmed
-            pointerEvents: isConfirmed ? "auto" : "none", // Disable clicks
+            opacity: isConfirmed ? 1 : 0.3, 
+            pointerEvents: isConfirmed ? "auto" : "none", 
             transition: "opacity 0.3s ease",
             display: "flex",
             flexDirection: "column",
-            gap: 3, // Space between buttons
+            gap: 3, 
           }}
         >
-          <PayPalButton />
-          {/* PayPal Donation */}
+          {/* <PayPalButton /> */}
+
           <Button
             variant='outlined'
             size='large'
