@@ -10,6 +10,39 @@ import backgroundImage from "/donation.jpg";
 import { SlPaypal } from "react-icons/sl";
 // import PayPalButton from "../PayPal/PayPalButton";
 import { RiBtcLine } from "react-icons/ri";
+import { keyframes } from "@mui/system";
+
+const heartAnimation = keyframes`
+  0% {
+    transform: scale(1);
+    opacity: 0;
+  }
+  50% {
+    transform: scale(1.2);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 0;
+  }
+`;
+
+const Heart = () => (
+  <Box
+    sx={{
+      position: "absolute",
+      top: "50%",
+      left: "50%",
+      transform: "translate(-50%, -50%)",
+      fontSize: "50px",
+      color: "red",
+      animation: `${heartAnimation} 1.5s ease-in-out`,
+    }}
+  >
+    ❤️
+  </Box>
+);
+
 
 const Donate = ({ darkMode }) => {
   const [showOptions, setShowOptions] = useState(false);
@@ -17,9 +50,16 @@ const Donate = ({ darkMode }) => {
   const [isConfirmed, setIsConfirmed] = useState(false);
   const [showError, setShowError] = useState(false);
 
+
+  const [showHeart, setShowHeart] = useState(false);
+
+  // Handle checkbox change
   const handleCheckboxChange = (event) => {
     setIsConfirmed(event.target.checked);
-    setShowError(false);
+    if (event.target.checked) {
+      setShowHeart(true);
+      setTimeout(() => setShowHeart(false), 2000); 
+    }
   };
 
   return (
@@ -89,7 +129,7 @@ const Donate = ({ darkMode }) => {
                 terms of use and agree to all points.
               </Typography>
             }
-          />
+          />{showHeart && <Heart />}
         </Box>
 
         {showError && (
