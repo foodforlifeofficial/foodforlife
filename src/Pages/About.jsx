@@ -144,15 +144,19 @@ export default function About({ darkMode }) {
           }}
         >
           <Slider {...settings}>
-      {images.map((image, index) => (
-        <SlideBox
-          key={index}
-          style={{
-            backgroundImage: `url(${image})`, 
-          }}
-        />
-      ))}
-    </Slider>
+            {images.map((image, index) => (
+              <Box key={index}>
+                <img
+                  src={image}
+                  style={{
+                    width: "100%",
+                    height: "400px",
+                    objectFit: "cover",
+                  }}
+                />
+              </Box>
+            ))}
+          </Slider>
           <CardContent>
             <Typography variant='h5' fontWeight='bold'>
               Photo Stories of Impact
