@@ -31,6 +31,7 @@ function App() {
       >
         <Navbar darkMode={darkMode} toggleDarkMode={toggleDarkMode} />
         <Routes>
+          <Route path='/foodforlife' element={<Home />} />
           <Route path='/' element={<Home />} />
           <Route path='/about' element={<About />} />
           <Route path='/donate' element={<Donate darkMode={darkMode} />} />
